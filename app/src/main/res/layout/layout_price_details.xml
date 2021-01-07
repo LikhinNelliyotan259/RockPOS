@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/totalText"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTotal" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="TextView"
+        android:textColor="@color/red_dark"
+        android:textSize="13sp"
+        android:gravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLabelStateTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="State tax"
+        app:layout_constraintBottom_toBottomOf="@+id/tvStateTax"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/tvStateTax" />
+
+    <TextView
+        android:id="@+id/tvStateTax"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/red_dark"
+        android:textSize="13sp"
+        android:gravity="end"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvLabelStateTax"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotal" />
+
+    <android.support.constraint.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvStateTax, tvLabelStateTax"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvLabelDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Delivery Fee"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDeliveryFeePrice"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/tvDeliveryFeePrice" />
+
+    <TextView
+        android:id="@+id/tvDeliveryFeePrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/red_dark"
+        android:textSize="13sp"
+        android:gravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvLabelDelivery"
+        app:layout_constraintTop_toBottomOf="@+id/tvStateTax" />
+
+    <TextView
+        android:id="@+id/tvLabelSaved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Saved"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSavedPrice"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/tvSavedPrice" />
+
+    <ImageView
+        android:id="@+id/ivRemoveCoupon"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="5dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLabelSaved"
+        app:layout_constraintStart_toEndOf="@+id/tvLabelSaved" />
+
+    <TextView
+        android:id="@+id/tvSavedPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:fontFamily="@font/montserrat_regular"
+        android:textColor="@color/red_dark"
+        android:textSize="13sp"
+        android:gravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvLabelSaved"
+        app:layout_constraintTop_toBottomOf="@+id/tvDeliveryFeePrice" />
+
+    <android.support.constraint.Group
+        android:visibility="gone"
+        android:id="@+id/groupCoupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvSavedPrice,ivRemoveCoupon,tvLabelSaved" />
+
+
+    <TextView
+        android:id="@+id/tvLabelGrandTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="@string/grand_total"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvGrandTotal"
+        app:layout_constraintEnd_toStartOf="@+id/tvGrandTotal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvGrandTotal" />
+
+    <TextView
+        android:id="@+id/tvGrandTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="TextView"
+        android:textColor="@color/red_dark"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvLabelGrandTotal"
+        app:layout_constraintTop_toBottomOf="@+id/tvSavedPrice" />
+</android.support.constraint.ConstraintLayout>

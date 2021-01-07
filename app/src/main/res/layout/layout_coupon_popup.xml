@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/transparent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    android:id="@+id/rl_coupon_popup_main"
+    android:background="@drawable/dialog_bg"
+    android:padding="10dp">
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="50dp"-->
+        <!--android:layout_marginRight="50dp"-->
+        <!--android:layout_marginTop="120dp"-->
+        <!--android:layout_marginBottom="120dp"-->
+        <!--android:background="@color/white">-->
+
+        <com.rockchipme.app.custom.TextViewCustom
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="choose coupon"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textColor="#c87f34"
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/lbl_choose_coupon"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_coupons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:layout_above="@+id/btn_close_popup"
+            android:layout_below="@id/lbl_choose_coupon"
+            android:layout_marginBottom="10dp"/>
+
+    <com.rockchipme.app.custom.ButtonCustom
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:layout_alignParentBottom="true"
+    android:background="@color/red_dark"
+    android:text="close"
+        android:gravity="center"
+    android:textColor="@color/white"
+
+    android:id="@+id/btn_close_popup"/>
+
+
+        <!--<com.sibin.homedelivery.custom.TextViewCustom-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_belonotificationId"@id/lbl_choose_coupon"-->
+            <!--android:layout_abovenotificationid="@+id/btn_close_popup"-->
+            <!--android:gravity="center"-->
+            <!--android:text="No Coupon Available"-->
+            <!--android:visibility="gone"-->
+            <!--android:id="@+id/tv_noCoupon_available"/>-->
+
+        <!--<com.sibin.homedelivery.custom.ButtonCustom-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:background="@color/red_dark"-->
+            <!--android:text="close"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:id="@+id/btn_close_popup"-->
+            <!--/>-->
+
+    <!--</RelativeLayout>-->
+
+</RelativeLayout>
+</LinearLayout>

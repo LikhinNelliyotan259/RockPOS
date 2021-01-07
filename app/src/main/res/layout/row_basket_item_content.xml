@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="95dp">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/civ"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/app_icon" />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="TextView"
+        android:textColor="#5D5D5C"
+        app:fontFamily="@font/montserrat_semi_bold"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/ivDelete"
+        app:layout_constraintStart_toEndOf="@+id/cvImage"
+        app:layout_constraintTop_toTopOf="@+id/cvImage"
+        app:layout_constraintVertical_chainStyle="packed" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#D0D0D0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="TextView"
+        android:fontFamily="@font/montserrat_regular"
+        android:textSize="13sp"
+        android:textColor="#666868"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Remarks :"
+        android:fontFamily="@font/montserrat_regular"
+        android:textSize="13sp"
+        android:textColor="#666868"
+        app:layout_constraintStart_toStartOf="@+id/tvUnit"
+        app:layout_constraintTop_toBottomOf="@+id/tvUnit" />
+
+    <TextView
+        android:id="@+id/tvRemarks"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:fontFamily="@font/montserrat_light"
+        android:textSize="13sp"
+        android:textColor="#666868"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintStart_toEndOf="@+id/textView21"
+        app:layout_constraintTop_toTopOf="@+id/textView21" />
+
+    <android.support.constraint.Group
+        android:id="@+id/groupRemarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvRemarks,textView21"
+        />
+
+
+    <TextView
+        android:id="@+id/tvUnitTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Extras :"
+        android:fontFamily="@font/montserrat_regular"
+        android:textSize="13sp"
+        android:textColor="#666868"
+        app:layout_constraintStart_toStartOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/tvRemarks" />
+
+    <TextView
+        android:id="@+id/tvAddons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:fontFamily="@font/montserrat_light"
+        android:textSize="13sp"
+        android:textColor="#666868"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintStart_toEndOf="@+id/tvUnitTitle"
+        app:layout_constraintTop_toTopOf="@+id/tvUnitTitle" />
+
+    <android.support.constraint.Group
+        android:id="@+id/groupAddOns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvUnitTitle,tvAddons"
+        />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="Qty"
+        android:fontFamily="@font/montserrat_regular"
+        android:textSize="13sp"
+        android:textColor="#666868"
+        app:fontFamily="@font/montserrat_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/quantityPicker"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toTopOf="@+id/quantityPicker" />
+
+    <com.rockchipme.app.custom.QuantityPicker
+        android:id="@+id/quantityPicker"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddons" />
+
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:maxLines="3"
+        android:minWidth="85dp"
+        android:text="QAR 100.00"
+        android:textColor="@color/red_dark"
+        app:fontFamily="@font/montserrat_semi_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/quantityPicker"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="20dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/ic_cart_delete_bg_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="@+id/ivDelete"
+        app:layout_constraintEnd_toEndOf="@+id/ivDelete"
+        app:layout_constraintStart_toStartOf="@+id/ivDelete"
+        app:layout_constraintTop_toTopOf="@+id/ivDelete"
+        app:srcCompat="@drawable/ic_delete" />
+
+</android.support.constraint.ConstraintLayout>

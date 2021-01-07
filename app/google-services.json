@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "926448630778",
+    "firebase_url": "https://rockchip-homedelivery.firebaseio.com",
+    "project_id": "rockchip-homedelivery",
+    "storage_bucket": "rockchip-homedelivery.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926448630778:android:07a93469949d8f62",
+        "android_client_info": {
+          "package_name": "com.rockchipme.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "926448630778-u01o81v3d4ln74uoen0imbja4c9t0rdj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rockchipme.app",
+            "certificate_hash": "0b67a85dae198bad594306bca4429c33e0938032"
+          }
+        },
+        {
+          "client_id": "926448630778-blhq155lg5sl54kkgmm6mlbd6gl7al49.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvYhUEhC0yqa2KTEt4O1aITNk1wt5Qgvs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "926448630778-blhq155lg5sl54kkgmm6mlbd6gl7al49.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="1dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="170dp"
+    android:layout_width="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:scaleType="centerCrop"
+        android:src="@drawable/app_icon"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:background="@color/categoryTransparentBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_item_count"
+            android:lineSpacingExtra="-5dp"
+            android:text="30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            app:fontFamily="@font/montserrat_semi_bold" />
+
+        <TextView
+            android:text="ITEMS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textColor="@color/white"
+            app:fontFamily="@font/montserrat_regular"/>
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/white"
+            android:layout_width="60dp"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:text="MONTHLY SPECIAL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:fontFamily="@font/montserrat_semi_bold"/>
+
+    </LinearLayout>
+
+</FrameLayout>

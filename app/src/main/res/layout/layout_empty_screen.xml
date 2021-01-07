@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutEmptyScreen"
+    android:visibility="gone"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:clickable="true"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true">
+
+    <!--<ImageView-->
+        <!--android:layout_width="@dimen/_60sdp"-->
+        <!--android:layout_height="@dimen/_60sdp"-->
+        <!--android:src="@drawable/empty"/>-->
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:src="@drawable/empty_screen_icon"/>
+
+    <com.rockchipme.app.custom.TextViewCustom
+        android:id="@+id/tvEmpty"
+        android:layout_marginTop="30dp"
+        android:text="@string/empty_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red_dark"
+        app:customFont="Montserrat_SemiBold_2.otf"
+        android:textSize="18sp">
+    </com.rockchipme.app.custom.TextViewCustom>
+
+    <com.rockchipme.app.custom.TextViewCustom
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:customFont="Montserrat_Regular_2.otf"
+        android:text="@string/empty_screen_description">
+        <!--app:backgroundTint="@color/orange_button">-->
+    </com.rockchipme.app.custom.TextViewCustom>
+
+</LinearLayout>

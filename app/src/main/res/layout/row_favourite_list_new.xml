@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="2.5dp"
+    app:cardUseCompatPadding="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cvImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/civ"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/app_icon" />
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvPrice"
+            app:layout_constraintStart_toEndOf="@+id/cvImage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <android.support.design.button.MaterialButton
+            android:visibility="gone"
+            android:id="@+id/btnMoveToCart"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="false"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:text="@string/move_to_cart"
+            android:textColor="@color/red_dark"
+            android:textSize="12sp"
+            app:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnRemove"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toEndOf="@+id/cvImage"
+            app:layout_constraintStart_toStartOf="@+id/tvItemName"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemName"
+            app:strokeColor="@color/red_dark"
+            app:strokeWidth="1dp" />
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/btnRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center"
+            android:paddingStart="0dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_weight="1.1"
+            android:paddingEnd="0dp"
+            android:text="@string/remove"
+            android:textSize="12sp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/red_dark"
+            android:textColor="@color/red_dark"
+            app:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/btnMoveToCart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnMoveToCart"
+            app:layout_constraintTop_toTopOf="@+id/btnMoveToCart" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxWidth="150dp"
+            android:maxLines="3"
+            android:minWidth="85dp"
+            android:text="QAR 100.00"
+            android:textColor="@color/red_dark"
+            app:fontFamily="@font/montserrat_regular"
+            app:layout_constraintBottom_toBottomOf="@+id/tvItemName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvItemName" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

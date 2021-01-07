@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <!--<android.support.design.widget.AppBarLayout-->
+        <!--android:id="@+id/appbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:theme="@style/AppTheme.AppBarOverlay">-->
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/toolbar_custom" />
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <ScrollView
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_gray_border">
+            <!--android:gravity="center">-->
+
+            <LinearLayout
+                android:id="@+id/llChange"
+                android:clickable="true"
+                android:background="?selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="12dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ic_change_password" />
+
+                <TextView
+                    android:id="@+id/tvChangePassword"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/change_password"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textDirection="locale"
+                    android:textColor="#272727"
+                    android:textAlignment="gravity"/>
+
+            </LinearLayout>
+
+            <View
+                android:background="#272727"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"/>
+
+            <LinearLayout
+                android:id="@+id/llNotification"
+                android:clickable="true"
+                android:background="?selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="12dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ic_notification_ico" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:maxLines="1"
+                    android:textColor="#272727"
+                    android:text="@string/notifications"
+                    android:textDirection="locale"
+                    android:textAlignment="gravity"/>
+
+            </LinearLayout>
+
+            <View
+                android:visibility="gone"
+                android:background="#272727"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"/>
+
+            <LinearLayout
+                android:id="@+id/llTermsAndCondi"
+                android:clickable="true"
+                android:background="?selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="12dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ic_terms" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:textColor="#272727"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:maxLines="1"
+                    android:text="@string/terms_and_condition"
+                    android:textAlignment="gravity"/>
+
+            </LinearLayout>
+
+            <View
+                android:background="#272727"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"/>
+
+            <LinearLayout
+                android:id="@+id/llLogout"
+                android:clickable="true"
+                android:background="?selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="12dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/ic_logout" />
+
+                <TextView
+                    android:id="@+id/tvLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#272727"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/logout"
+                    android:textAlignment="gravity"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

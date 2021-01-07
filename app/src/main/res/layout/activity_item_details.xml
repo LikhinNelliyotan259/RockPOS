@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            layout="@layout/toolbar_custom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<android.support.design.widget.AppBarLayout-->
+    <!--android:id="@+id/app_bar_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?attr/actionBarSize"-->
+    <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+    <!--android:fitsSystemWindows="true">-->
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/toolbar"-->
+    <!--android:title="Hello"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?attr/actionBarSize"-->
+    <!--app:layout_collapseMode="pin" >-->
+
+    <!--<ImageView-->
+    <!--android:paddingBottom="5dp"-->
+    <!--android:paddingTop="5dp"-->
+    <!--android:src="@drawable/logo"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?attr/actionBarSize"-->
+    <!--android:scaleType="centerInside"-->
+    <!--android:fitsSystemWindows="true"/>-->
+
+    <!--</android.support.v7.widget.Toolbar>-->
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill_vertical"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical"
+            android:paddingBottom="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/ivMain"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_185sdp"
+                android:adjustViewBounds="true"
+                android:background="@color/accent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/z_banner" />
+
+            <!--<include layout="@layout/layout_coupon"/>-->
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    style="@style/Widget.CardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="15dp"
+                        android:paddingLeft="15dp">
+                        <!--android:background="@color/yellow_bg"-->
+                        <com.rockchipme.app.custom.TextViewCustom
+                            android:id="@+id/tProductName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@id/flFavourite"
+                            android:text=""
+                            android:textColor="@color/red_dark"
+                            app:customFont="Montserrat_SemiBold_2.otf" />
+
+                        <FrameLayout
+                            android:id="@+id/flFavourite"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true">
+
+                            <ImageView
+                                android:id="@+id/ivFavourite"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/fav_unselect" />
+
+                        </FrameLayout>
+
+                    </RelativeLayout>
+
+                    <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Burger"-->
+                    <!--android:textAppearance="@style/TextAppearance.AppCompat.Title" />-->
+                    <com.rockchipme.app.custom.TextViewCustom
+
+                        android:id="@+id/tvItemDetails"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="left"
+                        android:paddingStart="17dp"
+                        android:paddingEnd="17dp"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="12sp"
+                        app:customFont="Montserrat_Regular_2.otf"></com.rockchipme.app.custom.TextViewCustom>
+
+                    <!--<TextView-->
+                    <!--android:textColor="@color/gray_text_color"-->
+                    <!--android:gravity="left"-->
+                    <!--android:layout_marginTop="2dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/cheese_ipsum"-->
+                    <!--android:textAppearance="@style/TextAppearance.AppCompat.Body1" />-->
+
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_marginLeft="42dp"-->
+                    <!--android:layout_marginRight="42dp"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_marginLeft="2dp"-->
+                    <!--android:gravity="left"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_width="140dp"-->
+                    <!--android:layout_height="match_parent">-->
+
+                    <!--<com.sibin.homedelivery.custom.TextViewCustom-->
+                    <!--android:textColor="@color/gray_text_color"-->
+                    <!--android:gravity="center"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Quantity"-->
+                    <!--android:textSize="12dp"-->
+                    <!--android:layout_marginBottom="2dp"-->
+                    <!--app:customFont="montserrat_regulartf">-->
+                    <!--</com.sibin.homedelivery.custom.TextViewCustom>-->
+
+                    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@color/gray_text_color"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="left"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="Quantity"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textSize="12dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textAppearance="@style/TextAppearance.AppCompat.Body1" />&ndash;&gt;-->
+                    <!--&lt;!&ndash;&ndash;&gt;-->
+
+                    <!--<com.sibin.homedelivery.numpick.ClickNumberPickerView-->
+                    <!--android:layout_width="120dp"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--app:decimal_number="0"-->
+                    <!--app:integer_priority="false"-->
+                    <!--app:picker_corner_radius="25"-->
+                    <!--app:pickers_background_color="@color/pink"-->
+                    <!--app:step="0.75"-->
+                    <!--app:swipe_animation="false"-->
+                    <!--app:swipe_enabled="false"-->
+                    <!--app:value_animation_down="true"-->
+                    <!--app:value_animation_up="true"-->
+                    <!--app:value_background_color="@color/pink"-->
+                    <!--app:value_text_color="@color/white"-->
+                    <!--app:value_view_offset="15"/>-->
+
+                    <!--</LinearLayout>-->
+
+                    <!--&lt;!&ndash;<View&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@color/gray_border_light"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="1dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="match_parent"/>&ndash;&gt;-->
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent">-->
+
+                    <!--<com.sibin.homedelivery.custom.TextViewCustom-->
+                    <!--android:textColor="@color/gray_text_color"-->
+                    <!--android:gravity="left"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Basic Price"-->
+                    <!--android:textSize="12dp"-->
+                    <!--app:customFont="montserrat_regular.otf-->
+                    <!--</com.sibin.homedelivery.custom.TextViewCustom>-->
+
+                    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@color/gray_text_color"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="left"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="Basic Price"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textSize="12dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textAppearance="@style/TextAppearance.AppCompat.Body1" />&ndash;&gt;-->
+                    <!--&lt;!&ndash;&ndash;&gt;-->
+                    <!--<LinearLayout-->
+                    <!--android:padding="5dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content">-->
+
+                    <!--<com.sibin.homedelivery.custom.TextViewCustomStrike-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="150"-->
+                    <!--app:customFont="montserrat_regulartf">-->
+                    <!--</com.sibin.homedelivery.custom.TextViewCustomStrike>-->
+
+                    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@color/black"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="150"/>&ndash;&gt;-->
+                    <!--<TextView-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="₹"/>-->
+
+                    <!--<com.sibin.homedelivery.custom.TextViewCustom-->
+                    <!--android:layout_marginLeft="2dp"-->
+                    <!--android:textColor="@color/pink"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="20dp"-->
+                    <!--android:text="140"-->
+                    <!--app:customFont="montserrat_regulartf">-->
+                    <!--</com.sibin.homedelivery.custom.TextViewCustom>-->
+
+                    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginLeft="2dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@color/pink"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textSize="20dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="150"/>&ndash;&gt;-->
+
+                    <!--</LinearLayout>-->
+
+                    <!--</LinearLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp">
+
+                            <com.rockchipme.app.custom.TextViewCustom
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:gravity="center"
+                                android:text="Quantity"
+                                android:textColor="@color/gray_text_color"
+                                android:textSize="12sp"
+                                app:customFont="Montserrat_Regular_2.otf" />
+
+                            <com.rockchipme.app.custom.QuantityPicker
+                                android:id="@+id/quantityPicker"
+                                android:layout_width="95dp"
+                                android:layout_height="35dp"
+                                app:custom_layout="@layout/quantity_picker_red_new" />
+
+
+                            <LinearLayout
+                                android:layout_width="60dp"
+                                android:layout_height="@dimen/basket_row_size"
+                                android:layout_marginTop="3dp"
+                                android:background="@drawable/rectangle"
+                                android:gravity="center"
+                                android:visibility="gone">
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/basket_row_size"
+                                    android:layout_weight="3">
+
+                                    <ImageView
+                                        android:id="@+id/iv_item_details_removeCart"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="right"
+                                        android:paddingLeft="5dp"
+                                        android:paddingTop="5dp"
+                                        android:paddingRight="3dp"
+                                        android:paddingBottom="5dp"
+                                        android:src="@drawable/minus_arrow" />
+
+                                </FrameLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/basket_row_size"
+                                    android:layout_weight="4"
+                                    android:gravity="center">
+
+                                    <com.rockchipme.app.custom.TextViewCustom
+                                        android:id="@+id/tv_item_details_cartCount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="000"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+                                </RelativeLayout>
+
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/basket_row_size"
+                                    android:layout_weight="3">
+
+                                    <ImageView
+                                        android:id="@+id/iv_item_details_addCart"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:paddingLeft="3dp"
+                                        android:paddingTop="5dp"
+                                        android:paddingRight="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:src="@drawable/plus_arrow" />
+                                </FrameLayout>
+
+                                <!--<com.sibin.homedelivery.custom.TextViewCustom-->
+                                <!--android:gravity="center"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:textSize="14sp"-->
+                                <!--android:text="10"-->
+                                <!--android:layout_marginRight="10dp"-->
+                                <!--android:layout_marginLeft="10dp"/>-->
+
+
+                                <!--<com.sibin.homedelivery.custom.TextViewCustom-->
+                                <!--android:gravity="center"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="+"-->
+                                <!--android:textSize="12sp"-->
+                                <!--android:background="@drawable/circle"/>-->
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.rockchipme.app.custom.TextViewCustom
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Basic Price"
+                                android:textColor="@color/gray_text_color"
+                                android:textSize="12sp"
+                                app:customFont="Montserrat_Regular_2.otf" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="5dp">
+
+                                <com.rockchipme.app.custom.TextViewCustomStrike
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:visibility="gone"
+                                    app:customFont="Montserrat_Regular_2.otf"></com.rockchipme.app.custom.TextViewCustomStrike>
+
+                                <!--<TextView-->
+                                <!--android:textColor="@color/black"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="150"/>-->
+
+                                <com.rockchipme.app.custom.TextViewCustom
+                                    android:id="@+id/tvProductPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:text=""
+                                    android:textColor="@color/pink"
+                                    android:textSize="20sp"
+                                    app:customFont="Montserrat_Regular_2.otf"></com.rockchipme.app.custom.TextViewCustom>
+
+                                <!--<TextView-->
+                                <!--android:layout_marginLeft="2dp"-->
+                                <!--android:textColor="@color/pink"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:textSize="20dp"-->
+                                <!--android:text="150"/>-->
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <android.support.design.button.MaterialButton
+                        android:id="@+id/btnAddToCart"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:text="Add To Basket"
+                        android:textColor="@color/red_dark"
+                        app:backgroundTint="@color/white"
+                        app:cornerRadius="0dp"
+                        app:strokeColor="@color/red_dark"
+                        app:strokeWidth="1dp" />
+
+                    <!--<Button-->
+                    <!--android:layout_marginLeft="40dp"-->
+                    <!--android:layout_marginRight="40dp"-->
+                    <!--android:id="@+id/email_sign_in_button"-->
+                    <!--style="@style/ButtonStyle"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Add To Basket"-->
+                    <!--android:textStyle="bold" />-->
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <include layout="@layout/layout_recently_viewed" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="15dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <include layout="@layout/layout_basket" />
+    <include layout="@layout/layout_loading" />
+
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+    <!--android:id="@+id/fab"-->
+    <!--app:layout_anchonotificationId"@id/app_bar_layout"-->
+    <!--app:layout_anchorGravity="bottom|right|end"-->
+    <!--style="@style/FabStyle"-->
+    <!--android:visibility="gone"/>-->
+
+</android.support.design.widget.CoordinatorLayout>

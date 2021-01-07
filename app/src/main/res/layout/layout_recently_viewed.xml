@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lnRecentlyViewedItems">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <com.rockchipme.app.custom.TextViewCustom
+            android:paddingBottom="5dp"
+            android:paddingTop="6dp"
+            android:paddingLeft="6dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Recently Viewed"
+            app:customFont="Montserrat_SemiBold_2.otf">
+        </com.rockchipme.app.custom.TextViewCustom>
+
+        <!--<TextView-->
+        <!--android:paddingBottom="5dp"-->
+        <!--android:paddingTop="6dp"-->
+        <!--android:paddingLeft="6dp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textSize="16dp"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Recently Viewed"/>-->
+
+        <com.rockchipme.app.custom.TextViewCustom
+            android:visibility="invisible"
+            android:id="@+id/tv_recentlyViewedMore"
+            android:paddingBottom="5dp"
+            android:paddingTop="6dp"
+            android:paddingRight="6dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MORE"
+            app:customFont="Montserrat_SemiBold_2.otf">
+        </com.rockchipme.app.custom.TextViewCustom>
+
+        <!--<TextView-->
+        <!--android:paddingBottom="5dp"-->
+        <!--android:paddingTop="6dp"-->
+        <!--android:paddingRight="6dp"-->
+        <!--android:textColor="@color/colorPrimary"-->
+        <!--android:layout_gravity="left"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textSize="16dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="MORE"/>-->
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_recent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"/>
+
+</LinearLayout>

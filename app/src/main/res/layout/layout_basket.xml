@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/design_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="50dp"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:cardCornerRadius="0dp"-->
+        <!--android:layout_marginRight="-3dp"-->
+        <!--android:layout_marginLeft="-3dp"-->
+        <!--app:cardUseCompatPadding="true"-->
+        <!--android:layout_marginTop="-4dp">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_basket_peek"
+                android:background="@color/red_dark"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <com.rockchipme.app.custom.TextViewCustom
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL ITEM"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp"
+                    app:customFont="Montserrat_SemiBold_2.otf">
+                </com.rockchipme.app.custom.TextViewCustom>
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="TOTAL ITEM"-->
+                    <!--android:textColor="#FFFFFF"-->
+                    <!--android:textSize="10dp"-->
+                    <!--android:textStyle="bold"/>-->
+
+                <com.rockchipme.app.custom.TextViewCustom
+                    android:id="@+id/bottomsheet_text_itemCount"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:customFont="Montserrat_SemiBold_2.otf">
+                </com.rockchipme.app.custom.TextViewCustom>
+
+                <!--<TextView-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="04"-->
+                    <!--android:textColor="#FFFFFF"-->
+                    <!--android:textSize="18dp"-->
+                    <!--android:textStyle="bold"/>-->
+
+                <com.rockchipme.app.custom.TextViewCustom
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL AMOUNT"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp"
+                    app:customFont="Montserrat_SemiBold_2.otf">
+                </com.rockchipme.app.custom.TextViewCustom>
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="TOTAL AMOUNT"-->
+                    <!--android:textColor="#FFFFFF"-->
+                    <!--android:textSize="10dp"-->
+                    <!--android:textStyle="bold"/>-->
+
+                <com.rockchipme.app.custom.TextViewCustom
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/bottomsheet_text_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:customFont="Montserrat_SemiBold_2.otf">
+                </com.rockchipme.app.custom.TextViewCustom>
+
+                <!--<TextView-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:id="@+id/bottomsheet_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="360"-->
+                    <!--android:textColor="#FFFFFF"-->
+                    <!--android:textSize="18dp"-->
+                    <!--android:textStyle="bold"/>-->
+            </LinearLayout>
+
+            <!-- Content Start-->
+
+            <!--<android.support.v4.widget.NestedScrollView-->
+                <!--android:id="@+id/scroll_basket"-->
+                <!--android:layout_gravity="fill_vertical"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:clipToPadding="false">-->
+
+
+            <!--<include layout="@layout/layout_basket_without_bottom_sheet"/>-->
+            <include layout="@layout/activity_basket_content"/>
+
+
+                <!-- Content End-->
+
+
+            <!--</android.support.v4.widget.NestedScrollView>-->
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_basket_bottom"
+                android:background="@color/red_dark"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL ITEM"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_total_quantity_basket"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="04"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL AMOUNT"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv_total_amount_basket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="360"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    <!--</android.support.v7.widget.CardView>-->
+
+</RelativeLayout>

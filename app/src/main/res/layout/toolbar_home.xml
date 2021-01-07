@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    app:popupTheme="@style/AppTheme.PopupOverlay"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <FrameLayout
+            android:id="@+id/flBackAction"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/ivBackAction"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_menu_icon"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="@dimen/_5sdp"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:focusable="true"
+            android:visibility="invisible">
+
+
+            <ImageView
+                android:id="@+id/iv"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/back_btn"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="@dimen/_5sdp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/tvAction"
+                android:layout_width="wrap_content"
+                android:scaleType="centerInside"
+                android:layout_height="30dp"
+                android:src="@drawable/app_title" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:background="?selectableItemBackgroundBorderless"
+            android:id="@+id/flCartAction"
+            android:padding="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/cart_icon"/>
+
+            <TextView
+                android:id="@+id/cart_badge"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="right|end|top"
+                android:layout_marginEnd="-5dp"
+                android:layout_marginRight="-5dp"
+                android:layout_marginTop="-3dp"
+                android:background="@drawable/cart_count_bg"
+                android:gravity="center"
+                android:padding="3dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="0"
+                android:textSize="9sp"
+                android:textStyle="bold"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flSearchAction"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:padding="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/search_icon"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.Toolbar >

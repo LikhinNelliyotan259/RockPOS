@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_basket_rl1"
+    android:background="#F3F3F3"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"></ScrollView>-->
+
+    <RelativeLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/layout_basket_mainLn1"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:gravity="center">
+                <com.rockchipme.app.custom.TextViewCustom
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/totalText"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+
+                <com.rockchipme.app.custom.TextViewCustom
+                    android:maxLines="2"
+                    android:id="@+id/tv_totalAmount"
+                    android:paddingLeft="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".7"
+                    android:text="OMR 0.00"
+                    android:textColor="@color/red_dark"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+
+                <Button
+                    android:id="@+id/btnPlaceOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/red_dark"
+                    android:textColor="@color/white"
+                    android:text="@string/place_order"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_basket_mainLn1"
+            android:id="@+id/scrollview_basket">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--<LinearLayout-->
+                <!--android:layout_belonotificationId"@id/layout_basket_mainLn1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--&gt;-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_weight="2.5">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="VOUCHER CODE"-->
+                <!--android:textSize="12sp"-->
+                <!--android:textColor="@color/red_dark"/>-->
+                <!--<EditText-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1.5"-->
+                <!--android:layout_marginRight="20dp"/>-->
+
+                <!--</LinearLayout>-->
+                <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--&gt;-->
+
+                <!--<Button-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:background="@drawable/button_bg_style"-->
+                <!--android:text="Add voucher from list"-->
+                <!--android:textSize="10dp"-->
+                <!--android:padding="5dp"-->
+                <!--android:textColor="@color/white"/>-->
+
+                <!--</LinearLayout>-->
+
+
+                <!--</LinearLayout>-->
+
+
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/ln_voucherCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/layout_basket_mainLn1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <!--<EditText-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1.3"-->
+                    <!--android:id="@+id/et_layout_basket_voucherCode"-->
+                    <!--android:layout_marginTop="5dp" />-->
+
+                    <!--<android.support.design.widget.TextInputLayout-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:id="@+id/tilVoucherCode"-->
+                    <!--android:theme="@style/TextLabel"-->
+                    <!--android:textColorHint="@color/black"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1.3"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--app:errorTextAppearance="@style/error_appearance">-->
+
+                    <!--<EditText-->
+                    <!--android:id="@+id/et_VoucherCode"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:hint="@string/voucher_code_hint"-->
+                    <!--android:imeActionid="@+id/login"-->
+                    <!--android:imeActionLabel="@string/action_sign_in_short"-->
+                    <!--android:imeOptions="actionUnspecified"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:padding="6dp"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:layout_marginRight="5dp"-->
+                    <!--android:background="@drawable/square_edit_text"/>-->
+
+                    <!--</android.support.design.widget.TextInputLayout>-->
+
+                    <FrameLayout
+                        android:paddingRight="10dp"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="3">
+
+                        <TextView
+                            android:background="@drawable/rect_barder_ping"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:id="@+id/tv_voucher_code"
+                            android:text="No coupon Added"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginRight="5dp"
+                            android:id="@+id/iv_delete_coupon"
+                            android:src="@drawable/com_facebook_close"
+                            android:layout_gravity="end|center_vertical"
+                            android:visibility="visible"/>
+                    </FrameLayout>
+
+                    <!--android:background="@drawable/button_bg_style"-->
+                    <Button
+                        android:background="@drawable/button_shape"
+                        android:id="@+id/btnAddVoucher"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="2"
+                        android:text="@string/add_voucher_button_text"
+                        android:textSize="10sp"
+                        android:padding="5dp"
+                        android:textColor="@color/white"
+                        android:layout_gravity="bottom" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_below="@id/ln_voucherCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ln_address"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/rectangle">
+
+                    <LinearLayout
+                        android:id="@+id/ln_no_address"
+                        android:padding="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:visibility="visible">
+                        <!--<LinearLayout-->
+                        <!--android:padding="5dp"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:orientation="vertical"-->
+                        <!--android:gravity="center">-->
+                        <com.rockchipme.app.custom.TextViewCustom
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No address found" />
+
+                        <com.rockchipme.app.custom.TextViewCustom
+                            android:id="@+id/tv_basket_createAddress"
+                            android:paddingTop="3dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:text="create address"
+                            android:textColor="@color/black"/>
+                        <!--android:drawableLeft="@drawable/create_address_icon"-->
+
+                        <!--</LinearLayout>-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:id="@+id/ln_addressDetails">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="10dp"
+                            android:orientation="vertical">
+
+                            <com.rockchipme.app.custom.TextViewCustom
+                                android:paddingTop="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="delivery address"
+                                android:textAllCaps="true"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"/>
+                            <com.rockchipme.app.custom.TextViewCustom
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvAddress"
+                                android:paddingTop="4dp"
+                                android:text="@string/lorem_ipsum"
+                                android:scrollbars="vertical"
+                                android:lineSpacingExtra="2dp"
+                                android:textColor="@color/black"
+                                android:paddingBottom="5dp"/>
+
+
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="7dp"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/ln_change_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <com.rockchipme.app.custom.TextViewCustom
+                                    android:id="@+id/tv_basket_editAddress"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableLeft="@drawable/edit_icon"
+                                    android:drawablePadding="10dp"
+                                    android:text="@string/edit_address"
+                                    android:textColor="@color/black"/>
+
+                                <com.rockchipme.app.custom.TextViewCustom
+                                    android:id="@+id/tv_basket_changeAddress"
+                                    android:paddingTop="3dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableLeft="@drawable/create_address_icon"
+                                    android:drawablePadding="10dp"
+                                    android:text="@string/change_address"
+                                    android:textColor="@color/black"/>
+
+                                <RadioGroup
+                                    android:id="@+id/rg_deliveryType"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_below="@+id/ln_change_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+                                    <RadioButton
+                                        android:checked="true"
+                                        android:id="@+id/rbDeliveryTypeHome"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="delivey"
+                                        android:button="@drawable/radio_button_background"
+                                        android:textColor="@color/black"
+                                        android:paddingLeft="3dp"/>
+                                    <RadioButton
+                                        android:id="@+id/rbDeliveryTypePickup"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Pickup"
+                                        android:button="@drawable/radio_button_background"
+                                        android:textColor="@color/black"
+                                        android:paddingLeft="3dp"/>
+
+                                </RadioGroup>
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_above="@+id/ln_footer_total"-->
+                <!--android:layout_below="@+id/ln_address"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:descendantFocusability="blocksDescendants">-->
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:popupTheme="@style/AppTheme.PopupOverlay"
+                    android:scrollbars="none" />
+
+                <!--</RelativeLayout>-->
+
+
+
+                <LinearLayout
+                    android:id="@+id/ln_footer_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_alignParentBottom="true">
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"></LinearLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.rockchipme.app.custom.TextViewCustom
+                                android:layout_marginStart="@dimen/_100sdp"
+                                android:layout_marginLeft="@dimen/_100sdp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/totalText"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                android:id="@+id/tvTotal"
+                                android:textStyle="bold"/>
+                            <com.rockchipme.app.custom.TextViewCustom
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.00"
+                                android:layout_alignBaseline="@id/tvTotal"
+                                android:textColor="@color/red_dark"
+                                android:id="@+id/tv_totalPrice"
+                                android:textStyle="bold"
+                                android:paddingEnd="10dp"
+                                android:paddingRight="10dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true" />
+
+                            <View
+                                android:layout_alignParentBottom="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#F3F3F3"/>
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <com.rockchipme.app.custom.TextViewCustom
+                                android:layout_marginStart="@dimen/_100sdp"
+                                android:layout_marginLeft="@dimen/_100sdp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/state_tax"
+                                android:textColor="@color/black"
+                                android:id="@+id/tv_stateTax"/>
+                            <com.rockchipme.app.custom.TextViewCustom
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@id/tv_stateTax"
+                                android:text="0.00"
+                                android:textColor="@color/red_dark"
+                                android:id="@+id/tv_stateTaxprice"
+                                android:paddingEnd="10dp"
+                                android:paddingRight="10dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true" />
+
+
+                            <View
+                                android:layout_alignParentBottom="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#F3F3F3"/>
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.rockchipme.app.custom.TextViewCustom
+                                android:layout_marginStart="@dimen/_100sdp"
+                                android:layout_marginLeft="@dimen/_100sdp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/delivery_fee"
+                                android:textColor="@color/black"
+                                android:id="@+id/tv_deliveryFee"/>
+                            <com.rockchipme.app.custom.TextViewCustom
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@id/tv_deliveryFee"
+                                android:text="0.00"
+                                android:textColor="@color/red_dark"
+                                android:id="@+id/tvDeliveryFeePrice"
+                                android:paddingEnd="10dp"
+                                android:paddingRight="10dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true" />
+
+                            <View
+                                android:layout_alignParentBottom="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#F3F3F3"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rlCoupondAmount">
+
+
+                            <com.rockchipme.app.custom.TextViewCustom
+                                android:layout_marginStart="@dimen/_100sdp"
+                                android:layout_marginLeft="@dimen/_100sdp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/saved"
+                                android:textColor="@color/black"
+                                android:id="@+id/tv_saved"/>
+                            <com.rockchipme.app.custom.TextViewCustom
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/tv_saved"
+                                android:layout_alignBaseline="@id/tv_saved"
+                                android:text="-0.00"
+                                android:textColor="@color/red_dark"
+                                android:id="@+id/tvSavedPrice"
+                                android:paddingEnd="10dp"
+                                android:paddingRight="10dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true" />
+
+                            <View
+                                android:layout_alignParentBottom="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#F3F3F3"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.rockchipme.app.custom.TextViewCustom
+                                android:layout_marginBottom="3dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginStart="@dimen/_100sdp"
+                                android:layout_marginLeft="@dimen/_100sdp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/grand_total"
+                                android:textAllCaps="true"
+                                android:textStyle="bold"
+                                android:id="@+id/tvGrandTotal"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"/>
+
+                            <com.rockchipme.app.custom.TextViewCustom
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignBaseline="@id/tvGrandTotal"
+                                android:text="0.00"
+                                android:textAllCaps="true"
+                                android:textStyle="bold"
+                                android:textSize="15sp"
+                                android:paddingEnd="10dp"
+                                android:paddingRight="10dp"
+                                android:id="@+id/tv_grandTotalPrice"
+                                android:textColor="@color/red_dark"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_empty_cart"
+        android:id="@+id/emptyBasketScreen"
+        android:visibility="gone"/>
+
+
+</FrameLayout>

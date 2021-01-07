@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">RockChip Homedelivery</string>
+
+    <string name="RestaurantKey">ChQr101</string>
+    <string name="CountryCode"> + 91 </string>
+    <!--<string name="RestaurantKey">DrSd102</string>-->
+
+    <string name="action_settings">Settings</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie. Fusce quis mauris a enim sollicitudin ultrices non eget velit. Aliquam eu pulvinar enim. Praesent libero nisl, ultricies vel maximus eu, maximus et nisi. Phasellus pharetra nec ligula vitae mollis. Quisque porttitor ornare magna, quis dignissim libero aliquam id. Donec sollicitudin ultrices ante, a semper erat tristique in. Vivamus sodales in ligula at sodales. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla tempus bibendum nibh, ac tincidunt quam convallis non. Proin dolor nunc, egestas et tortor consequat, dignissim lacinia odio. Ut ut aliquet erat.  Ut non scelerisque elit. Morbi dolor neque, iaculis eu justo rutrum, aliquet dictum mauris. Phasellus quis massa ut ligula feugiat congue a et dolor. Etiam a dui a sapien ornare accumsan ac ut lorem. Suspendisse vehicula lorem dapibus nibh rhoncus ultricies. Proin sem nulla, elementum quis pharetra quis, commodo vitae nisi. Donec urna orci, posuere et iaculis sit amet, fringilla quis sapien. Pellentesque nec posuere felis. Praesent malesuada tellus nisi, non dictum justo interdum eget. Quisque mollis euismod libero, non aliquam lorem interdum vitae. Aliquam vehicula efficitur purus eget rutrum. Sed pulvinar fermentum risus ac viverra. Cras laoreet ligula quam, ac lacinia nisl elementum in. Aenean velit arcu, euismod a venenatis non, pulvinar pulvinar massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie. Fusce quis mauris a enim sollicitudin ultrices non eget velit. Aliquam eu pulvinar enim. Praesent libero nisl, ultricies vel maximus eu, maximus et nisi. Phasellus pharetra nec ligula vitae mollis. Quisque porttitor ornare magna, quis dignissim libero aliquam id. Donec sollicitudin ultrices ante, a semper erat tristique in. Vivamus sodales in ligula at sodales. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla tempus bibendum nibh, ac tincidunt quam convallis non. Proin dolor nunc, egestas et tortor consequat, dignissim lacinia odio. Ut ut aliquet erat.  Ut non scelerisque elit. Morbi dolor neque, iaculis eu justo rutrum, aliquet dictum mauris. Phasellus quis massa ut ligula feugiat congue a et dolor. Etiam a dui a sapien ornare accumsan ac ut lorem. Suspendisse vehicula lorem dapibus nibh rhoncus ultricies. Proin sem nulla, elementum quis pharetra quis, commodo vitae nisi. Donec urna orci, posuere et iaculis sit amet, fringilla quis sapien. Pellentesque nec posuere felis. Praesent malesuada tellus nisi, non dictum justo interdum eget. Quisque mollis euismod libero, non aliquam lorem interdum vitae. Aliquam vehicula efficitur purus eget rutrum. Sed pulvinar fermentum risus ac viverra. Cras laoreet ligula quam, ac lacinia nisl elementum in. Aenean velit arcu, euismod a venenatis non, pulvinar pulvinar massa.</string>
+    <string name="home">Home</string>
+    <string name="favourite">Favourite</string>
+    <string name="downloaded">Downloaded</string>
+    <string name="more">More</string>
+    <string name="settings">Settings</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">EMAIL</string>
+    <string name="prompt_password">PASSWORD</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_up_short">Sign up</string>
+    <!--<string name="error_invalid_user_name">This username address is invalid</string>-->
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_phone">This phone number is invalid</string>
+    <string name="error_invalid_pincode">This pincode is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_password_doesnt_match">Password doesn\'t match</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="cheese_ipsum">Lorem ipsum dolor sit amet, ut ius nostro iriure corrumpit. Eam ut iriure consectetuer, eam utamur suavitate eu.Lorem ipsum dolor sit amet, ut ius nostro iriure corrumpit. Eam ut iriure consectetuer, eam utamur suavitate eu</string>
+    <string name="title_activity_dummy">DummyActivity</string>
+
+
+    <!--String related to basket  -->
+    <string name="totalText">TOTAL</string>
+    <string name="place_order">Place Order</string>
+    <string name="voucher_code_hint">VOUCHER CODE</string>
+    <string name="add_voucher_button_text">Add voucher</string>
+    <string name="grand_total">grand total</string>
+    <string name="discount_amount">Discount Amount</string>
+    <string name="delivery_fee">Delivery Fee</string>
+    <string name="state_tax">State Tax</string>
+    <string name="saved">Saved(Coupon)</string>
+
+    <string name="edit_address"><u>Edit Address</u></string>
+    <string name="change_address"><u>Change Address</u></string>
+    <string name="create_address"><u>Create Address</u></string>
+
+    <string name="edit_caps">EDIT</string>
+    <string name="delete_caps">DELETE</string>
+    <string name="undo_caps">UNDO</string>
+
+
+
+    <string name="facebook_app_id">423781591400649</string>
+    <string name="fb_login_protocol_scheme">fb423781591400649</string>
+
+
+
+    <!-- activity_settings.xml -->
+    <string name="change_password">Change password</string>
+    <string name="notifications">Notifications</string>
+    <string name="logout">Logout</string>
+    <string name="terms_and_condition">Terms and conditions</string>
+
+
+
+
+    <string name="continue_caps">CONTINUE</string>
+    <string name="cancel_caps">CANCEL</string>
+    <string name="old_password">Old password</string>
+
+    <string name="confirm_password">Confirm password</string>
+    <string name="login_caps">LOGIN</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="skip_registration">Skip</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password"><u>FORGOT PASSWORD</u></string>
+
+
+    <string name="empty_title">Whoops !</string>
+    <!--<string name="empty_screen_description">Nothing found please try again&#8230;</string>-->
+    <string name="empty_screen_description">Nothing found</string>
+    <string name="move_to_cart">Move to Basket</string>
+    <string name="remove">Remove
+
+
+    </string>
+
+    <string name="order_id">Order Id</string>
+    <!--<string name="order_status">Order Status</string>-->
+    <string name="order_status">Status:</string>
+    <string name="deliver_date">Delivery Date</string>
+    <string name="order_date">Order Date</string>
+    <string name="deliveryDetails">Delivery Details</string>
+
+    <!--menu drawer-->
+    <string name="favourites">FAVOURITES</string>
+    
+    
+    <integer name="dialogplus_animation_default_duration">100</integer>
+
+    <!--<string name="server_client_id">YOUR_SERVER_CLIENT_ID</string>-->
+</resources>

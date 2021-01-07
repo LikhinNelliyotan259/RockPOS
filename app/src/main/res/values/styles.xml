@@ -1,0 +1,148 @@
+<!--
+  ~ Copyright (C) 2015 Antonio Leiva
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+    <style name="AppTheme" parent="BaseTheme" />
+
+    <style name="BaseTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!--<item name="colorPrimary">@color/primary</item> -->
+        <item name="colorPrimary">@color/white</item> 
+        <item name="colorPrimaryDark">@color/gray_status_bar</item> 
+        <item name="colorControlHighlight">@color/accent_translucent</item> 
+        <item name="colorAccent">@color/accent</item>
+        <item name="selectableItemBackground">@drawable/selectable_item_background</item>
+        <item name="android:selectableItemBackground">@drawable/selectable_item_background</item>
+    </style>
+
+    <style name="FabStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/spacing_large</item>
+        <item name="android:src">@drawable/ic_favorite_white_24dp</item>
+        <item name="borderWidth">0dp</item>
+        <item name="elevation">6dp</item>
+        <item name="pressedTranslationZ">12dp</item>
+        <item name="rippleColor">@android:color/white</item>
+    </style>
+
+    <style name="Widget.CardContent" parent="android:Widget">
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <color name="primary">#00BCD4</color>
+    <color name="primary_dark">#0097A7</color>
+    <color name="accent">#FC9200</color>
+    <color name="accent_translucent">#80FFEB3B</color>
+    <color name="accent_bright">#FFF493</color>
+    <!--<color name="colorAccent">#FC9200</color>-->
+
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/pink</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ThemeEditTextLight">
+        <item name="colorControlNormal">#FFFFFF</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColorHint">#BDBDBD</item>
+    </style>
+
+    <color name="gray_background">#FAFAFA</color>
+    <color name="gray_background_transparent">#E6FFFFFF</color>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+
+    <!--<style name="TextLabel" parent="TextAppearance.AppCompat">-->
+        <!--&lt;!&ndash; Hint color and label color in FALSE state &ndash;&gt;-->
+        <!--<item name="android:textColorHint">@color/white</item>-->
+        <!--&lt;!&ndash; Label color in TRUE state and bar color FALSE and TRUE State &ndash;&gt;-->
+        <!--<item name="colorAccent">@color/accent</item>-->
+        <!--<item name="colorControlNormal">@color/white</item>-->
+        <!--<item name="colorControlActivated">@color/accent</item>-->
+    <!--</style>-->
+
+
+    <style name="TextLabeForAddress" parent="Widget.Design.TextInputLayout">
+        <!--<item name="android:textColorHint">@color/white</item>-->
+        <item name="colorAccent">@color/red_dark</item>
+        <!--<item name="colorControlNormal">@color/white</item>-->
+        <!--<item name="android:textStyle">bold</item>-->
+        <item name="colorControlActivated">@color/red_dark</item>
+    </style>
+
+    <style name="TextLabel" parent="Widget.Design.TextInputLayout">
+        <item name="android:textColorHint">@color/white</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/accent</item>
+    </style>
+    <style name="error_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/red_light</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <style name="TextLabelNew" parent="Widget.Design.TextInputLayout">
+    </style>
+
+    <style name="MyMaterialTheme.Basenew" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/gray_status_bar</item>
+        <item name="colorAccent">@color/accent</item>
+    </style>
+
+    <style name="BrandButtonStyle" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/pink</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="SwipeLayout">
+        <item name="android:paddingBottom">1px</item>
+        <item name="android:background">#e5e5e5</item>
+    </style>
+
+    <style name="CenterTextView">
+        <item name="android:padding">6dp</item>
+        <item name="android:textColor">@color/center_text</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="RightTextView">
+        <item name="android:padding">6dp</item>
+        <item name="android:textColor">@color/right_text</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="LeftTextView">
+        <item name="android:padding">6dp</item>
+        <item name="android:textColor">@color/left_text</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="popup_window_animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom2</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom2</item>
+        <item name="android:popupBackground">@android:color/white</item>
+    </style>
+</resources>

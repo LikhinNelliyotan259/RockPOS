@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/rbUnit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:textSize="14sp"
+        app:buttonTint="@color/red_dark"
+        android:paddingLeft="5dp"
+        android:text="RadioButton"
+        android:textColor="#6A6A6A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--style="@android:style/Widget.CompoundButton.RadioButton"-->
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textColor="#353535"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="end"
+        app:layout_constraintBottom_toBottomOf="@+id/rbUnit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rbUnit" />
+
+    <View
+        android:id="@+id/viewUnderline"
+        android:layout_width="0dp"
+        android:layout_height="0.6dp"
+        android:background="#DDDDDD"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbUnit" />
+</android.support.constraint.ConstraintLayout>

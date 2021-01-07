@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAllCaps="true"
+            android:id="@+id/rb_address_name"
+            android:buttonTint="@color/red_dark"/>
+
+        <com.rockchipme.app.custom.TextViewCustom
+            android:layout_toEndOf="@id/rb_address_name"
+            android:layout_toRightOf="@id/rb_address_name"
+            android:layout_alignBaseline="@id/rb_address_name"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="sss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:id="@+id/tv_address_name"/>
+
+
+        <com.rockchipme.app.custom.TextViewCustom
+            android:layout_alignStart="@id/tv_address_name"
+            android:layout_alignLeft="@id/tv_address_name"
+            android:layout_below="@id/tv_address_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_full_address"/>
+
+    </RelativeLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<RadioButton-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="NAME"-->
+            <!--android:textAllCaps="true"-->
+            <!--android:id="@+id/rb_address_name"-->
+            <!--android:buttonTint="@color/red_dark"/>-->
+
+    <!--<com.rockchipme.app.custom.TextViewCustom-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/tv_full_address"/>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F0E0C6"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.rockchipme.app.custom.TextViewCustom
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/edit_caps"
+            android:textColor="@color/red_dark"
+            android:gravity="center"
+            android:padding="5dp"
+            android:id="@+id/tv_edit_address"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#F0E0C6"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/delete_caps"
+            android:textColor="@color/red_dark"
+            android:gravity="center"
+            android:padding="5dp"
+            android:id="@+id/tv_delete_address"/>
+
+    </LinearLayout>
+
+    <!--</LinearLayout>-->
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#F0E0C6"/>
+
+</LinearLayout>

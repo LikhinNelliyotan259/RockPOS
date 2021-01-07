@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#BD081C</color>
+    <color name="colorPrimaryDark">#BD081C</color>
+    <color name="colorAccent">#FC9200</color>
+    <color name="categoryTransparentBg">#66330c0c</color>
+    <color name="gray_text_color">#919191</color>
+    <color name="pink">#EC203B</color>
+    <color name="pink_light">#EA8193</color>
+    <color name="yellow_coupon">#FFBB01</color>
+    <color name="yellow_bg">#FEC726</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray_border_light">#D3D3D3</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="red_dark">#C92228</color>
+    <color name="red_light">#FF9494</color>
+    <color name="basket_subtotal_bg">#F4DFC2</color>
+    <color name="basket_service_bg">#FBEFE1</color>
+    <color name="gray_basket_bg">#f6f6f6</color>
+    <color name="gray_status_bar">#3f2a14</color>
+    <color name="header_color">#BC1111</color>
+
+    <color name="center_bg">#FFF</color>
+    <color name="center_text">#333</color>
+    <color name="right_bg">#fc515b</color>
+    <color name="right_text">#FFF</color>
+    <color name="left_bg">#054ecc</color>
+    <color name="left">#4287ff</color>
+    <color name="left_text">#FFF</color>
+
+    <color name="pickers_background">#3F51B5</color>
+    <color name="center_background">#99FFFFFF</color>
+    <color name="picker_pressed">#1AFFFFFF</color>
+
+
+    <color name="gray_title_bg_2">#F4F4F4</color>
+    <color name="blue_text">#184177</color>
+    <color name="gray_line">#dbdbdb</color>
+    <color name="grayTextColor">#3f3f3f</color>
+
+
+
+    <!-- SweetAlertDialog button color -->
+    <color name="red_btn_bg_color">#D0D0D0</color>
+    <color name="red_btn_bg_pressed_color">#D0D0D0</color>
+    <color name="main_green_color">#d50000</color>
+    <color name="main_green_stroke_color">#AEDEF4</color>
+
+</resources>

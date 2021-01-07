@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#272727"
+    tools:context=".activities.LoginActivity">
+    <!--android:background="@drawable/login_bg"-->
+
+    <ScrollView
+        android:layout_centerInParent="true"
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarStyle="outsideOverlay">
+
+        <LinearLayout
+            android:id="@+id/svLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="25dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            >
+
+            <!--<TextView-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textStyle="bold"-->
+                <!--android:text="Login"-->
+                <!--android:textSize="25dp"-->
+                <!--android:layout_marginBottom="15dp"/>-->
+
+            <com.rockchipme.app.custom.TextViewCustom
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="LOGIN"
+                app:customFont="Montserrat_SemiBold_2.otf">
+            </com.rockchipme.app.custom.TextViewCustom>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilEmail"
+                android:theme="@style/TextLabel"
+                android:textColorHint="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorTextAppearance="@style/error_appearance">
+
+                <AutoCompleteTextView
+                    android:id="@+id/atvEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:padding="12dp"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/white"
+                    android:drawableRight="@drawable/icon_mail"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="2dp"
+                android:id="@+id/tilPassword"
+                android:theme="@style/TextLabel"
+                android:textColorHint="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorTextAppearance="@style/error_appearance">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_password"
+                    android:imeActionId="@+id/login"
+                    android:imeActionLabel="@string/action_sign_in_short"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:padding="12dp"
+                    android:drawableRight="@drawable/icon_password"
+                    android:textColor="@color/white"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!--<Button-->
+                <!--android:id="@+id/email_sign_in_button"-->
+                <!--style="@style/ButtonStyle"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:text="@string/action_sign_in_short"-->
+                <!--android:textStyle="bold" />-->
+
+            <LinearLayout
+                android:id="@+id/llNotNow"
+                android:layout_gravity="right"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <com.rockchipme.app.custom.TextViewCustom
+                    android:id="@+id/textViewPlus1"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="Not now skip"
+                    android:layout_gravity="center_vertical"
+                    app:customFont="Montserrat_Regular_2.otf">
+                </com.rockchipme.app.custom.TextViewCustom>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/skip_icon" />
+
+            </LinearLayout>
+
+            <!--<android.support.v7.widget.AppCompatButton-->
+                <!--android:layout_marginTop="30dp"-->
+                <!--android:id="@+id/email_sign_in_button"-->
+                <!--style="@style/Widget.AppCompat.Button.Colored"-->
+                <!--app:backgroundTint="@color/pink"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/action_sign_in_short"-->
+                <!--android:textStyle="bold"/>-->
+
+            <com.rockchipme.app.custom.ButtonCustom
+                android:id="@+id/email_sign_in_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                app:backgroundTint="@color/pink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/action_sign_in_short"
+                app:customFont="Montserrat_SemiBold_2.otf">
+            </com.rockchipme.app.custom.ButtonCustom>
+
+            <!--<com.wang.avi.AVLoadingIndicatorView-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/indicator"-->
+                <!--app:indicatorName="LineScalePulseOutIndicator"-->
+                <!--/>-->
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:paddingBottom="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="0dp">
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Don't have an account yet?"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:textColor="@color/white"/>-->
+                <com.rockchipme.app.custom.TextViewCustom
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have an account yet?"
+                    app:customFont="Montserrat_Regular_2.otf">
+                </com.rockchipme.app.custom.TextViewCustom>
+
+                <com.rockchipme.app.custom.TextViewCustom
+                    android:id="@+id/tvSignUp"
+                    android:textColor="@color/accent"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SignUp"
+                    app:customFont="Montserrat_SemiBold_2.otf">
+                </com.rockchipme.app.custom.TextViewCustom>
+
+                <!--<TextView-->
+                    <!--android:padding="10dp"-->
+                    <!--android:id="@+id/tvSignUp"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="SignUp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textSize="16sp"-->
+                    <!--android:textColor="@color/accent"/>-->
+
+            </LinearLayout>
+
+            <com.rockchipme.app.custom.TextViewCustom
+                android:id="@+id/tv_forgotPaswd"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="0dp"
+                android:paddingBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:text="Forgot password?"
+                app:customFont="Montserrat_Regular_2.otf">
+            </com.rockchipme.app.custom.TextViewCustom>
+
+
+            <com.rockchipme.app.custom.TextViewCustom
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:text="Or Sign in with"
+                app:customFont="Montserrat_Regular_2.otf">
+            </com.rockchipme.app.custom.TextViewCustom>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"/>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_gplusLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#FFFF"
+                    android:src="@drawable/ic_google"
+                    android:padding="10dp"
+                    android:layout_marginRight="7dp"/>
+                <ImageView
+                    android:id="@+id/iv_fbLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="#3F5A9F"
+                    android:src="@drawable/fb"
+                    android:padding="10dp"
+                    android:layout_marginLeft="7dp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+</ScrollView>
+
+    <include layout="@layout/layout_loading"/>
+</RelativeLayout>

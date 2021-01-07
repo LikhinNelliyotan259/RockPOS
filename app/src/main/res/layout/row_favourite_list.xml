@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EFDFC6"
+    android:layout_marginBottom="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@color/white"
+                app:civ_border_width="0dp"
+                app:civ_border_color="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.2"
+            android:gravity="center_vertical"
+            android:paddingEnd="3dp"
+            android:paddingRight="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--<com.sibin.homedelivery.custom.TextViewCustom-->
+                <!--android:paddingTop="2dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="OMR 20500.000"-->
+                <!--android:id="@+id/tv_order_history_price"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textColor="@color/red_dark"/>-->
+
+                <com.rockchipme.app.custom.TextViewCustom
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="item name"
+                    app:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:id="@+id/tvItemName"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+
+
+                    <com.rockchipme.app.custom.TextViewCustom
+                        android:id="@+id/tvMoveToCart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="@string/move_to_cart"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
+                        android:background="@drawable/button_shape"
+                        android:paddingRight="6dp"
+                        android:paddingLeft="6dp" />
+
+                    <com.rockchipme.app.custom.TextViewCustom
+                        android:id="@+id/tvRemove"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:paddingTop="3dp"
+                        android:text="@string/remove"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
+                        android:background="@drawable/button_shape"
+                        android:paddingRight="6dp"
+                        android:paddingLeft="6dp"/>
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#F7EFE4"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+
+            <com.rockchipme.app.custom.TextViewCustom
+                android:paddingTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OMR 20500.000"
+                android:id="@+id/tvPrice"
+                android:textStyle="bold"
+                android:textColor="@color/red_dark"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:layout_marginStart="5dp"-->
+    <!--android:layout_marginRight="5dp"-->
+    <!--android:layout_marginEnd="5dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:background="@color/white"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/white"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:padding="5dp">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/ivProduct"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="70dp"-->
+            <!--android:scaleType="fitCenter" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical"-->
+                <!--android:paddingBottom="10dp"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingStart="10dp">-->
+
+                <!--<com.rockchipme.app.custom.TextViewCustom-->
+                    <!--android:id="@+id/tvTitle"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:ellipsize="end"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:text="Lee Cooper Casuals (Brown)"-->
+                    <!--android:textColor="@color/material_blue_grey_80"-->
+                    <!--android:textSize="12sp"-->
+                    <!--android:textDirection="locale"-->
+                    <!--android:textAlignment="gravity">-->
+                <!--</com.rockchipme.app.custom.TextViewCustom>-->
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/title"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="Pizza"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textSize="15dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textStyle="bold"/>&ndash;&gt;-->
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:background="@color/transparent" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="3dp"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<com.rockchipme.app.custom.TextViewCustom-->
+                        <!--android:id="@+id/tvPrice"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="OMR 22.97"-->
+                        <!--android:textColor="@color/black"-->
+                        <!--android:textSize="11sp"></com.rockchipme.app.custom.TextViewCustom>-->
+
+                    <!--<com.rockchipme.app.custom.TextViewCustom-->
+                        <!--android:id="@+id/tvDiscount"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_marginStart="5dp"-->
+                        <!--android:text="25.66"-->
+                        <!--android:textSize="9sp"-->
+                        <!--android:textStyle="normal">-->
+                    <!--</com.rockchipme.app.custom.TextViewCustom>-->
+
+                    <!--<com.rockchipme.app.custom.TextViewCustom-->
+                        <!--android:id="@+id/tvDiscountPercentage"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_marginStart="5dp"-->
+                        <!--android:paddingBottom="3dp"-->
+                        <!--android:paddingTop="3dp"-->
+                        <!--android:text="20% off"-->
+                        <!--android:textSize="10sp"-->
+                        <!--android:textStyle="normal">-->
+                    <!--</com.rockchipme.app.custom.TextViewCustom>-->
+
+                    <!--<View-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_height="1dp"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="2dp"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<com.rockchipme.app.custom.TextViewCustom-->
+                        <!--android:id="@+id/tvRatingCount"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="4.2"-->
+                        <!--android:textSize="11sp"-->
+                        <!--android:textStyle="normal">-->
+
+                    <!--</com.rockchipme.app.custom.TextViewCustom>-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/ivRating"-->
+                        <!--android:layout_width="12dp"-->
+                        <!--android:layout_height="12dp"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:layout_marginStart="5dp"-->
+                        <!--android:scaleType="centerCrop" />-->
+
+
+                <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
+
+
+        <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<View-->
+        <!--android:background="@color/gray_line"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0.5dp"/>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<LinearLayout-->
+            <!--android:background="?selectableItemBackground"-->
+            <!--android:clickable="true"-->
+            <!--android:id="@+id/llMoveToCart"-->
+            <!--android:padding="5dp"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="11sp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="11sp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:src="@drawable/move_to_cart"/>&ndash;&gt;-->
+
+            <!--<com.rockchipme.app.custom.TextViewCustom-->
+                <!--android:layout_marginLeft="3dp"-->
+                <!--android:layout_marginStart="3dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:paddingBottom="3dp"-->
+                <!--android:paddingTop="3dp"-->
+                <!--android:text="@string/move_to_cart"-->
+                <!--android:textSize="11sp"-->
+                <!--android:textStyle="normal">-->
+            <!--</com.rockchipme.app.custom.TextViewCustom>-->
+
+        <!--</LinearLayout>-->
+
+        <!--<View-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="1dp"/>-->
+
+        <!--<LinearLayout-->
+            <!--android:background="?selectableItemBackground"-->
+            <!--android:clickable="true"-->
+            <!--android:id="@+id/llRemove"-->
+            <!--android:padding="5dp"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="11sp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="11sp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:src="@drawable/delete_cart"/>&ndash;&gt;-->
+
+            <!--<com.rockchipme.app.custom.TextViewCustom-->
+                <!--android:layout_marginLeft="3dp"-->
+                <!--android:layout_marginStart="3dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:paddingBottom="3dp"-->
+                <!--android:paddingTop="3dp"-->
+                <!--android:text="@string/remove"-->
+                <!--android:textSize="11sp"-->
+                <!--android:textStyle="normal">-->
+            <!--</com.rockchipme.app.custom.TextViewCustom>-->
+
+        <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+<!--</LinearLayout>-->

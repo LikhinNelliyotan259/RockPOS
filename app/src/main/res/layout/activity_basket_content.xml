@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F3F3F3"
+    android:layout_height="match_parent">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="#F3F3F3"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/view7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="2dp"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:drawableStart="@drawable/ic_location_red"
+                            android:textSize="15sp"
+                            android:drawablePadding="3dp"
+                            android:text="DELIVERY ADDRESS"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/montserrat_regular"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:textSize="13sp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/textView"
+                            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                        <RadioGroup
+                            android:id="@+id/rgDeliveryType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvAddress">
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/rbDeliveryTypeHome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="1"
+                                android:checked="true"
+                                android:textSize="16sp"
+                                app:buttonTint="@color/red_dark"
+                                app:fontFamily="@font/montserrat_regular"
+                                android:textColor="#676868"
+                                android:text="Delivery" />
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/rbDeliveryTypePickup"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:textSize="16sp"
+                                app:buttonTint="@color/red_dark"
+                                android:textColor="#676868"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="Pickup" />
+                        </RadioGroup>
+
+                        <android.support.design.button.MaterialButton
+                            android:id="@+id/btnChangeOrEditAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:paddingStart="30dp"
+                            android:paddingEnd="30dp"
+                            android:text="Edit or Change Address"
+                            android:textAllCaps="false"
+                            android:textColor="@color/red_dark"
+                            app:backgroundTint="@color/white"
+                            app:cornerRadius="0dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            app:icon="@drawable/ic_edit_red"
+                            app:iconGravity="textStart"
+                            app:iconPadding="7dp"
+                            app:iconTint="@color/red_dark"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/rgDeliveryType"
+                            app:strokeColor="@color/red_dark"
+                            app:strokeWidth="1dp" />
+
+                        <android.support.design.button.MaterialButton
+                            android:id="@+id/btnAddAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="Create Address"
+                            android:textColor="@color/red_dark"
+                            app:backgroundTint="@color/white"
+                            app:cornerRadius="0dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/rgDeliveryType"
+                            app:strokeColor="@color/red_dark"
+                            app:strokeWidth="1dp" />
+
+                        <android.support.constraint.Group
+                            android:id="@+id/groupAddressDetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:constraint_referenced_ids="tvAddress,textView,btnChangeOrEditAddress,rgDeliveryType" />
+
+                        <android.support.constraint.Group
+                            android:id="@+id/groupNoAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:constraint_referenced_ids="btnAddAddress" />
+
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cvAddress">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvCart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"
+                            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                            app:layout_constraintBottom_toTopOf="@+id/include"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:itemCount="1"
+                            tools:listitem="@layout/row_basket_item" />
+
+                        <include
+                            android:id="@+id/include"
+                            layout="@layout/layout_price_details"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnAddVoucher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/red_dark"
+            android:text="@string/add_voucher_button_text"
+            app:cornerRadius="0dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/btnPlaceOrder"
+            app:layout_constraintEnd_toStartOf="@+id/btnPlaceOrder"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnPlaceOrder" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnPlaceOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/place_order"
+            app:backgroundTint="@color/red_dark"
+            android:textColor="@color/white"
+            app:cornerRadius="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnAddVoucher"
+            app:layout_constraintTop_toTopOf="@+id/view7" />
+    </android.support.constraint.ConstraintLayout>
+
+    <include
+        android:id="@+id/emptyBasketScreen"
+        layout="@layout/layout_empty_cart"
+        android:visibility="gone" />
+</FrameLayout>

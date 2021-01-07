@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/toolbar_home" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_marginTop="?attr/actionBarSize"
+        android:clipToPadding="false"
+        android:layout_gravity="fill_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:clipToPadding="false"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="match_parent"
+            android:paddingBottom="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tvRestaurantName"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tvRestaurantDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="13sp"
+                    android:maxWidth="100dp"
+                    android:layout_marginStart="5dp"/>
+
+            </LinearLayout>
+
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carouselView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_160sdp"
+                app:fillColor="#FFFFFFFF"
+                app:pageColor="#00000000"
+                app:radius="6dp"
+                app:slideInterval="3000"
+                app:strokeColor="#FF777777"
+                app:strokeWidth="1dp"/>
+
+            <!--<ImageView-->
+                <!--android:adjustViewBounds="true"-->
+                <!--android:background="@color/accent"-->
+                <!--android:src="@drawable/banner"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/_160sdp"-->
+                <!--android:scaleType="centerCrop"/>-->
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/layout_coupon"/>
+
+                <LinearLayout
+                    android:id="@+id/lnRecomendedCategories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <com.rockchipme.app.custom.TextViewCustom
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Recommended"
+                        app:customFont="Montserrat_SemiBold_2.otf">
+                    </com.rockchipme.app.custom.TextViewCustom>
+
+                    <!--<TextView-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textSize="16dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Recommended"/>-->
+
+                    <com.rockchipme.app.custom.TextViewCustom
+                        android:id="@+id/tv_recomendedCategoryMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:visibility="invisible"
+                        android:text="MORE"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:customFont="Montserrat_SemiBold_2.otf"></com.rockchipme.app.custom.TextViewCustom>
+
+                    <!--<TextView-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:textColor="@color/colorPrimary"-->
+                    <!--android:layout_gravity="left"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textSize="16dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="MORE"/>-->
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:scrollbars="vertical"/>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    app:cardCornerRadius="0dp">
+
+                    <LinearLayout
+                        android:background="@color/pink"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:background="@drawable/shadow1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:src="@drawable/category_img"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerInside"
+                                android:adjustViewBounds="true"/>
+
+                            <LinearLayout
+                                android:gravity="center_vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <com.rockchipme.app.custom.TextViewCustom
+                                    android:textColor="@color/white"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Category"
+                                    android:textSize="23sp"
+                                    android:lineSpacingMultiplier="1"
+                                    app:customFont="Montserrat_SemiBold_2.otf">
+                                </com.rockchipme.app.custom.TextViewCustom>
+
+                                <!--<TextView-->
+                                <!--android:textColor="@color/white"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="Category"-->
+                                <!--android:textSize="23dp"-->
+                                <!--android:lineSpacingExtra="-10dp"-->
+                                <!--android:lineSpacingMultiplier="1"-->
+                                <!--android:textAppearance="@style/TextAppearance.AppCompat.Body1" />-->
+                                <!---->
+                                <LinearLayout
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:layout_gravity="center|bottom">
+
+                                    <com.rockchipme.app.custom.TextViewCustom
+                                        android:id="@+id/tv_noOfCategories"
+                                        android:textColor="@color/white"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="30"
+                                        android:textSize="25sp"
+                                        app:customFont="Montserrat_SemiBold_2.otf">
+                                    </com.rockchipme.app.custom.TextViewCustom>
+
+                                    <!--<TextView-->
+                                    <!--android:textColor="@color/white"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:text="30"-->
+                                    <!--android:textSize="25dp"-->
+                                    <!--android:textAppearance="@style/TextAppearance.AppCompat.Title" />-->
+                                    <!---->
+
+                                    <com.rockchipme.app.custom.TextViewCustom
+                                        android:textColor="@color/white"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Categories"
+                                        android:textSize="8sp"
+                                        app:customFont="Montserrat_Regular_2.otf">
+                                    </com.rockchipme.app.custom.TextViewCustom>
+                                    <!---->
+                                    <!--<TextView-->
+                                    <!--android:textColor="@color/white"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:text="Categories"-->
+                                    <!--android:textSize="8dp"-->
+                                    <!--android:textAppearance="@style/TextAppearance.AppCompat.Title" />-->
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <include layout="@layout/layout_recently_viewed"/>
+
+                <!--<View-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="?attr/actionBarSize"/>-->
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+<!--<FrameLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <!--<android.support.v7.widget.CardView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="24dp"-->
+                <!--app:cardElevation="@dimen/spacing_medium"-->
+                <!--app:cardUseCompatPadding="true">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/title"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="@dimen/spacing_large"-->
+                        <!--android:layout_marginRight="@dimen/spacing_large"-->
+                        <!--android:layout_marginTop="@dimen/spacing_large"-->
+                        <!--android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/description"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_margin="@dimen/spacing_large"-->
+                        <!--android:text="@string/lorem_ipsum"-->
+                        <!--android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>-->
+
+                <!--</LinearLayout>-->
+
+            <!--</android.support.v7.widget.CardView>-->
+
+        <!--</FrameLayout>-->
+    <!--</com.nirhart.parallaxscroll.views.ParallaxScrollView>-->
+    </ScrollView>
+    <!--</android.support.v4.widget.NestedScrollView>-->
+
+    <!--<include layout="@laylayout_basketsket"/>-->
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/design_bottom_sheet"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:behavior_hideable="true"-->
+        <!--app:behavior_peekHeight="50dp"-->
+        <!--app:elevation="4dp"-->
+        <!--app:layout_behavior="@string/bottom_sheet_behavior">-->
+
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--app:cardCornerRadius="0dp">-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/ll_basket_peek"-->
+                <!--android:background="@color/red"-->
+                <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+                <!--android:paddingLeft="30dp"-->
+                <!--android:paddingRight="30dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="?attr/actionBarSize"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:gravity="center_vertical">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="TOTAL ITEM"-->
+                    <!--android:textColor="#FFFFFF"-->
+                    <!--android:textSize="10dp"-->
+                    <!--android:textStyle="bold"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="04"-->
+                    <!--android:textColor="#FFFFFF"-->
+                    <!--android:textSize="18dp"-->
+                    <!--android:textStyle="bold"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="TOTAL AMOUNT"-->
+                    <!--android:textColor="#FFFFFF"-->
+                    <!--android:textSize="10dp"-->
+                    <!--android:textStyle="bold"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:id="@+id/bottomsheet_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="360"-->
+                    <!--android:textColor="#FFFFFF"-->
+                    <!--android:textSize="18dp"-->
+                    <!--android:textStyle="bold"/>-->
+
+            <!--</LinearLayout>-->
+
+        <!--</android.support.v7.widget.CardView>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:text="Basket"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--app:layout_anchonotificationId"@id/app_bar_layout"-->
+        <!--app:layout_anchorGravity="bottom|right|end"-->
+        <!--style="@style/FabStyle"-->
+        <!--android:visibility="gone"/>-->
+
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/btnMenu"
+        android:layout_margin="13dp"
+        app:cornerRadius="15dp"
+        android:text="Menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:backgroundTint="@color/colorAccent"
+        app:fabSize="normal" />
+
+    <include layout="@layout/layout_loading"/>
+
+</android.support.design.widget.CoordinatorLayout>
